@@ -44,6 +44,7 @@ class CashRegister
     item_list =[]
     @shopping_cart.each do |key1, value1|
       item_list << key1[:title]
+      binding.pry
 
     end
     item_list
@@ -55,7 +56,7 @@ class CashRegister
   end
 
   def void_last_transaction
-    
+
     @total = @total - (@shopping_cart[-1][:price] * @shopping_cart[-1][:quantity])
 
 
